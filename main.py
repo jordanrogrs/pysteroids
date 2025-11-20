@@ -4,6 +4,7 @@ from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
+from logger import log_state
 
 def main():
     pygame.init()
@@ -27,6 +28,7 @@ def main():
     dt = 0
 
     while True:
+        log_state()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
